@@ -1,0 +1,141 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'reset';
+@import url('https://fonts.googleapis.com/css?family=Pavanam');
+
+// fonts
+$main-font: 'Pavanam', sans-serif;
+
+
+// color vars
+$blk: #000;
+$nav-gray: #B9B9B9;
+$cd-green: #82A603;
+$cd-blue: #26ABAB;
+
+.header-wrapper {
+  overflow: hidden;
+  background-color: $nav-gray;
+}
+
+.logo {
+  border: 1px solid $blk;
+  float: left;
+  height: 150px;
+  width: 300px;
+  // display: block;
+}
+
+.navbar {
+  float: left;
+  font-family: $main-font;
+  font-size: 30px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+  button {
+    border: none;
+    font-family: $main-font;
+    font-size: 30px;
+    background-color: $nav-gray;
+    transition: .5s;
+    width: 160px;
+  }
+  button:hover{
+    background-color: blue;
+  }
+}
+
+.drop-content {
+  display: none;
+  min-width: 160px;
+  position: absolute;
+  background-color: #f9f9f9;
+  z-index: 1;
+    a {
+      color: black;
+      display: block;
+    }
+}
+
+.dropdown:hover .drop-content {
+  display: block;
+}
+
+.top-body-wrapper {
+  border: 1px solid $blk;
+  height: 408px;
+  overflow: auto;
+}
+
+.cover-image {
+  width: 75%;
+  height: 100%;
+  border: 1px solid blue;
+  float: left;
+}
+
+.login {
+  float: right;
+  border: 1px solid red;
+  height: 100%;
+  width: 24%;
+}
+
+.login-form {
+  input {
+    display: inline;
+  }
+}
+
+.bottom-body-wrapper {
+  overflow: auto;
+  margin: 0 auto;
+    h2 {
+      text-align: center;
+    }
+}
+
+.reasons {
+  margin: 30px 5px 0 27px;
+  border: 1px solid $blk;
+  float: left;
+  width: 30%;
+  height: 400px;
+  text-align: center;
+    div {
+      margin: 10px auto;
+      height: 100px;
+      width: 80%;
+      border: 1px solid blue;
+    }
+}
+
+.footer {
+  overflow: auto;
+  text-align: center;
+}
+
+.links, .specialists {
+  float: left;
+  width: 20%;
+    a {
+      display: block;
+    }
+}
+
+.social {
+  float: left;
+    span {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      border: 1px solid $cd-blue;
+      display: inline-block;
+    }
+}
