@@ -14,20 +14,20 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-'use strict';
-
-let loginHide = function(){
-  $('.signup').show();
-  $('.login').hide();
-}
-
-let signupHide = function(){
-  $('.login').show();
-  $('.signup').hide();
-}
-
-$(()=>{
-  $('.signup').hide();
-  $('.sign-button').on('click', loginHide);
-  $('.login-button').on('click', signupHide);
-});
+// 'use strict';
+//
+// let loginHide = function(){
+//   $('.signup').show();
+//   $('.login').hide();
+// }
+//
+// let signupHide = function(){
+//   $('.login').show();
+//   $('.signup').hide();
+// }
+//
+// $(()=>{
+//   $('.signup').hide();
+//   $('.sign-button').on('click', loginHide);
+//   $('.login-button').on('click', signupHide);
+// });

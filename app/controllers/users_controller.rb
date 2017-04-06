@@ -10,9 +10,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      # user feedback indicating their sign up was successful since there is nowhere to redirect to 
-      flash[:success] = 'Welcome to the Sample App!'
-      render 'new' #potentially redirect to login?
+      # user feedback indicating their sign up was successful since there is nowhere to redirect to
+      # redirect_to 'root_path'
+      flash[:success] = 'Sign Up Success! Feel free to login!'
+      redirect_to '/login'
     else
       render 'new'
     end

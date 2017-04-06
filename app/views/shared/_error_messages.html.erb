@@ -3,9 +3,9 @@
     <div class="alert">
       The form contains <%= pluralize(@user.errors.count, "error") %>.
     </div>
-    <ul>
+    <ul class="alert">
     <% @user.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
+      <li class="alert"><%= msg %></li>
     <% end %>
     </ul>
   </div>

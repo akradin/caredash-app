@@ -1,11 +1,12 @@
-// Place all the styles related to the Users controller here.
+// Place all the styles related to the Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 $error-red: #DB4F46;
 $cd-green: #82A603;
 
-.new_user {
+form {
+  // float: left;
   input {
     display: inherit;
     margin-left: 180px;
@@ -13,10 +14,18 @@ $cd-green: #82A603;
     border-radius: 5px;
     margin-bottom: 5px;
   }
-  button{
-    // text-align: center;
+  label {
+    font-size: 20px;
+    margin-bottom: 5px;
   }
 }
+
+
+.alert {
+  background-color: $error-red;
+  color: white;
+}
+
 
 .alert-danger {
   background-color: $error-red;

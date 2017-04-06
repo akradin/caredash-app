@@ -12,19 +12,28 @@ $main-font: 'Pavanam', sans-serif;
 $blk: #000;
 $nav-gray: #B9B9B9;
 $cd-green: #82A603;
+$cd-dark-green: #688307;
 $cd-blue: #26ABAB;
+$fb-blue: #3B5998;
+$twitter-blue: #55ACEE;
+$ig-orange: #F56040;
+$pin-red: #BD081C;
 
 .header-wrapper {
-  overflow: hidden;
+  // overflow: hidden;
   background-color: $nav-gray;
+  height: 80px;
 }
 
 .logo {
-  border: 1px solid $blk;
   float: left;
-  height: 150px;
+  height: 80px;
   width: 300px;
   // display: block;
+  background-image: url('caredash-heart.jpg');
+  background-repeat: no-repeat;
+  background-position: 46%;
+  background-size: contain;
 }
 
 .navbar {
@@ -32,12 +41,13 @@ $cd-blue: #26ABAB;
   font-family: $main-font;
   font-size: 30px;
   margin-left: 20px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .dropdown {
   display: inline-block;
   position: relative;
+  text-align: center;
   button {
     border: none;
     font-family: $main-font;
@@ -47,18 +57,19 @@ $cd-blue: #26ABAB;
     width: 160px;
   }
   button:hover{
-    background-color: blue;
+    background-color: $cd-blue;
   }
 }
 
 .drop-content {
   display: none;
-  min-width: 160px;
+  min-width: 200px;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: rgba(185, 185, 185, .75);
   z-index: 1;
     a {
-      color: black;
+      color: $blk;
+      margin-bottom: 15px;
       display: block;
     }
 }
@@ -74,30 +85,82 @@ $cd-blue: #26ABAB;
 }
 
 .cover-image {
-  width: 75%;
+  width: 70%;
   height: 100%;
-  border: 1px solid blue;
   float: left;
+  text-align: center;
+  background-size: cover;
+  font-family: $main-font;
+  background-image: url('boston.jpg');
+  h2 {
+    font-size: 30px;
+    width: 70%;
+    margin: 20px auto;
+  }
+  p {
+    font-size: 20px;
+    width: 80%;
+    margin: 40px auto;
+  }
 }
 
 .login, .signup {
+  font-family: $main-font;
   float: right;
-  border: 1px solid red;
   height: 100%;
-  width: 24%;
+  width: 29%;
+  text-align: center;
+  overflow: auto;
+  p {
+    font-size: 20px;
+    margin: 20px 0 20px;
+  }
+  div {
+    margin: 0 auto;
+  }
 }
 
-.login-form {
-  input {
-    display: inline;
-  }
+  // .login-form {
+  //   p {
+  //     font-size: 30px;
+  //     margin-bottom: 20px;
+  //   }
+  //   form {
+  //     text-align: center;
+  //     display: inline-block;
+  //     input {
+  //       text-align: center;
+  //     }
+  //   }
+  // }
+
+.login-button{
+  background-color: $cd-green;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  transition: .5s;
+  display: block;
+  margin: 0 auto;
+  height: 20px;
+  height: 35px;
+  font-size: 20px;
+  width: 100px;
+}
+
+.login-button:hover{
+  background-color: $cd-dark-green;
 }
 
 .bottom-body-wrapper {
   overflow: auto;
-  margin: 0 auto;
+  margin: 0 auto 30px;
+  background-color: $nav-gray;
+  font-family: $main-font;
     h2 {
       text-align: center;
+      font-size: 30px;
+      margin-top: 5px;
     }
 }
 
@@ -108,11 +171,34 @@ $cd-blue: #26ABAB;
   width: 30%;
   height: 400px;
   text-align: center;
+  background-color: $nav-gray;
     div {
       margin: 10px auto;
       height: 100px;
       width: 80%;
-      border: 1px solid blue;
+    }
+    h3 {
+      font-size: 25px;
+      margin-bottom: 10px;
+      color: $cd-blue;
+    }
+    p{
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    button {
+      border: none;
+      border-radius: 5px;
+      background-color: $cd-green;
+      color: white;
+      font-size: 20px;
+      margin-top: 5px;
+      width: 150px;
+      height: 40px;
+      transition: .5s;
+    }
+    button:hover {
+      background-color: $cd-dark-green;
     }
 }
 
@@ -126,16 +212,38 @@ $cd-blue: #26ABAB;
   width: 20%;
     a {
       display: block;
+      font-size: 20px;
+      margin-bottom: 5px;
     }
 }
 
 .social {
   float: left;
     span {
-      height: 40px;
-      width: 40px;
+      height: 60px;
+      width: 60px;
       border-radius: 50%;
-      border: 1px solid $cd-blue;
       display: inline-block;
+      i {
+        margin-top: 15px;
+        color: white;
+        font-size: 30px
+      }
     }
+}
+
+.fb {
+  background-color: $fb-blue;
+}
+
+.twitter {
+  background-color: $twitter-blue;
+}
+
+.ig {
+  background-color: $ig-orange;
+}
+
+.pin {
+  background-color: $pin-red;
 }

@@ -1,14 +1,15 @@
+<body>
   <div class="header-wrapper">
     <div class="logo">
-      <!-- <img src="../../app/assets/images/caredash-logo.png" alt="logo"> -->
+      <!-- <img src="../../assets/images/caredash-logo.png" alt="logo"> -->
     </div>
     <div class="navbar">
       <div class="dropdown">
         <button>Menu Item</button>
         <div class="drop-content">
-          <a href="https://www.caredash.com/find-primary-care-physician" target="_blank">Link 1</a>
-          <a href="https://www.caredash.com/find-dentist" target="_blank">Link 2</a>
-          <a href="https://www.caredash.com/find-pediatrician" target="_blank">Link 3</a>
+          <a href="https://www.caredash.com/find-primary-care-physician" target="_blank" target="_blank">Find a Physician</a>
+          <a href="https://www.caredash.com/find-dentist" target="_blank">Find a Dentist</a>
+          <a href="https://www.caredash.com/find-pediatrician" target="_blank">Find a Pediatrician</a>
         </div>
       </div>
       <div class="dropdown">
@@ -35,29 +36,22 @@
       <p>Turducken rump beef ribs prosciutto. Strip steak corned beef pig tri-tip pastrami short ribs kielbasa pork belly ribeye turducken landjaeger cupim turkey prosciutto ground round. Turducken jowl corned beef, short loin pancetta pastrami landjaeger ham hock chicken kevin pork loin sausage meatball rump swine</p>
     </div>
     <div class="signup">
-      <p>Sign Up with CareDash to Edit your Provider Profile</p>
-      <%= form_for(@user , :html=>{:class=> 'login-form'}) do |f| %>
-        <%= render 'shared/error_messages' %>
-        <%= render 'shared/success_messages' %>
+      <p>Sign In with CareDash to Edit your Provider Profile</p>
+      <div>
+        <%= form_for(:session, url: login_path, :html=>{:class=> 'login-form'}) do |f| %>
+          <%= render 'shared/success_messages' %>
 
-        <%= f.label :first_name %>
-        <%= f.text_field :first_name %>
+          <%= f.label :email %>
+          <%= f.email_field :email %>
 
-        <%= f.label :last_name %>
-        <%= f.text_field :last_name %>
+          <%= f.label :password %>
+          <%= f.password_field :password %>
 
-        <%= f.label :email %>
-        <%= f.email_field :email %>
+          <%= f.submit "Log in", class: "login-button" %>
+          <p>New user? <%= link_to "Sign up now!", root_path %></p>
+        <% end %>
 
-        <%= f.label :password %>
-        <%= f.password_field :password %>
-
-        <%= f.label :password_confirmation, "Confirmation" %>
-        <%= f.password_field :password_confirmation %>
-
-        <%= f.submit "Sign Up", class: "login-button" %>
-        <p> Already a user? You can <%= link_to 'Login', login_path%> here.</p>
-      <% end %>
+      </div>
     </div>
   </div>
   <div class="bottom-body-wrapper">
@@ -65,7 +59,6 @@
     <div class="reasons">
       <div>
         <%= image_tag("steth.png", :alt => "stethoscop-icon") %>
-
       </div>
       <h3>Headline</h3>
       <p>Bacon ipsum dolor amet drumstick ribeye boudin pancetta capicola bacon picanha filet mignon burgdoggen alcatra jerky cupim chuck chicken. Turducken rump beef ribs prosciutto. Strip steak corned beef pig tri-tip pastrami short ribs kielbasa pork belly ribeye turducken landjaeger cupim turkey prosciutto ground round. Turducken jowl corned beef, short loin pancetta pastrami landjaeger ham hock chicken kevin pork loin sausage meatball rump swine</p>
@@ -89,7 +82,6 @@
       <button type="button">Learn More</button>
     </div>
   </div>
-  <hr>
   <div class="footer">
     <div class="links">
       <a href="https://www.caredash.com/" target="_blank">Home</a>
