@@ -247,3 +247,46 @@ $pin-red: #BD081C;
 .pin {
   background-color: $pin-red;
 }
+
+@media (max-width: 1065px){
+  .reasons {
+    width: 70%;
+    margin-left: 15%;
+  }
+  .links, .specialists {
+    width: 50%;
+  }
+  .social {
+    margin: 0 auto;
+    float: none;
+  }
+}
+
+@media (max-width: 820px){
+  .navbar {
+    display: none;
+  }
+  .logo {
+    float: none;
+    margin: 0 auto;
+    display: block;
+  }
+  .cover-image {
+    width: 100%;
+  }
+  .top-body-wrapper {
+    float: none;
+    position: static;
+    width: auto;
+  }
+  .login, .signup {
+    border-left: 0;
+    margin: 0;
+    width: 100%;
+  }
+  .cover-image {
+    p {
+      color: white;
+    }
+  }
+}

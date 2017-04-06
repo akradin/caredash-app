@@ -20,6 +20,38 @@ form {
   }
 }
 
+@media (max-width: 1420px){
+  form{
+    input {
+      margin-left: 140px;
+    }
+  }
+}
+
+@media (max-width: 1120px){
+  form{
+    input {
+      margin-left: 100px;
+    }
+  }
+}
+
+@media (max-width: 920px){
+  form{
+    input {
+      margin-left: 65px;
+    }
+  }
+}
+
+@media (max-width: 760px){
+  form{
+    input {
+      margin-left: 315px;
+    }
+  }
+}
+
 
 .alert {
   background-color: $error-red;
