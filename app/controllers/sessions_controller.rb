@@ -6,9 +6,9 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
       # Log the user in.
-      flash[:success] = 'Thanks for logging in!'
+      flash[:success] = 'Thanks for logging in! Want to log out? Just close this window!'
       log_in user
-      redirect_to 'new'
+      render 'new'
     else
       flash.now[:danger] = 'Invalid email/password combination'
       #  an error message.
