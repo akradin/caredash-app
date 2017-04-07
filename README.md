@@ -5,7 +5,7 @@
 * fork and clone this repository
 * install dependencies with `bundle install`
 * run server with `rails server`
-* bin/rails db:migrate RAILS_ENV=development
+* run `bin/rails db:migrate RAILS_ENV=development`
 * navigate to `localhost:3000`
 
 ##Description
