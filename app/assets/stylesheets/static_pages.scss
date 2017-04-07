@@ -65,7 +65,8 @@ $pin-red: #BD081C;
   display: none;
   min-width: 200px;
   position: absolute;
-  background-color: rgba(185, 185, 185, .75);
+  // background-color: rgba(185, 185, 185, .75);
+  background-color: $nav-gray;
   z-index: 1;
     a {
       color: $blk;
